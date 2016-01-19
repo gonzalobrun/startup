@@ -9,64 +9,60 @@
 	<title>Globant's Web UI Bootcamp</title>
 </head>
 
-<body bgcolor="6E6E6E">
-	<header align="center"> <h1> <font color="white" face="arial"> MEDIA </font> </h1> </header>
+<body>
+	<header> <h1>MEDIA</h1> </header>
 	<br>
 
-	<section align="center">
-		<font color="white" face="arial">
-			Image:
-			<figure>
-				<img src="img/skate.jpg" alt="Skate and Converse" width="500px">
-				<figcaption>
-					Skate and converse
-				</figcaption>
-			</figure>
-			Video: 
-			<br><br>
-			<video src="vid/prayerInC.mp4" type="video/mp4" width="500" controls>
-			</video>
-			<br><br>
-			Sound:
-			<br><br>
-			<audio src="audio/sugar.mp3" type="audio/mpeg" controls></audio>
-		</font>	
+	<section>
+		<h3>Image:</h3>
+		<figure>
+			<img src="img/skate.jpg" alt="Skate and Converse" width="500">
+			<figcaption>
+				Skate and converse
+			</figcaption>
+		</figure>
+		<h3>Video:</h3> 
+		<br><br>
+		<video src="vid/prayerInC.mp4" width="500" controls>
+		</video>
+		<br><br>
+		<h3>Sound:</h3>
+		<br><br>
+		<audio src="audio/sugar.mp3" controls></audio>
 	</section> <br><br>
 
-	<section align="center">
-		<font face="arial" color="white">
-			<header> <h3>Complete the following form:</h3></header>
-			<div>
-				<form action="#" method="get">
-					<label for="firstName">First Name:</label> <br>
-					<input type="text" name="firstName" id="firstName" size="40" required autofocus> <br> <br>
+	<section>
+		<header> <h3>Complete the following form:</h3></header>
+		<div>
+			<form action="#" method="get">
+				<label for="firstName">First Name:</label> <br>
+				<input type="text" name="firstName" id="firstName" size="40" required autofocus> <br> <br>
 
-					<label for="lastName">Last Name:</label>  <br>
-					<input type="text" name="lastName" id="lastName" size="40"  required> <br> <br>
+				<label for="lastName">Last Name:</label>  <br>
+				<input type="text" name="lastName" id="lastName" size="40"  required> <br> <br>
 
-					<label for="email">e-mail:</label>  <br>
-					<input type="email" name="email" id="email" size="40" required> <br> <br>
+				<label for="email">e-mail:</label>  <br>
+				<input type="email" name="email" id="email" size="40" required> <br> <br>
 
-					<label for="birthdate">Birthdate</label>  <br>
-					<input type="date" name="birthdate" id="birthdate" required size="40"> <br> <br>
+				<label for="birthdate">Birthdate</label>  <br>
+				<input type="date" name="birthdate" id="birthdate" required size="40"> <br> <br>
 
-					<label for="sports">Choose your favourite Sport:</label>  <br>
-					<select name="sports" id="sports" width="40">
-						<option value="football">Football</option>
-						<option value="tennis" selected>Tennis</option>
-						<option value="jockey">Jockey</option>
-						<option value="basketball">Basketball</option>
-						<option value="volleyball">Volleyball</option>
-					</select> <br><br>
+				<label for="sports">Choose your favourite Sport:</label>  <br>
+				<select name="sports" id="sports">
+					<option value="football">Football</option>
+					<option value="tennis" selected>Tennis</option>
+					<option value="jockey">Jockey</option>
+					<option value="basketball">Basketball</option>
+					<option value="volleyball">Volleyball</option>
+				</select> <br><br>
 
-					<label for="bio">Tell us something about you:</label>  <br>
-					<textarea name="bio" id="bio" rows="10" cols="40" placeholder="Write a short bio..." required></textarea> <br><br>
+				<label for="bio">Tell us something about you:</label>  <br>
+				<textarea name="bio" id="bio" rows="10" cols="40" placeholder="Write a short bio..." required></textarea> <br><br>
 
-					<input type="reset" value="Reset">					
-					<input type="submit" value="Sign Up">
-				</form>
-			</div>
-		</font>
+				<input type="reset" value="Reset">					
+				<input type="submit" value="Sign Up">
+			</form>
+		</div>
 	</section>
 
 </body>
