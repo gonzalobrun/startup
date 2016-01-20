@@ -1,0 +1,71 @@
+html{
+	font-size: 14px;
+	font-family: verdana;
+}
+
+header{
+	background-color: lightgray;
+	text-align: center;
+}
+
+footer{
+	background-color: lightgray;
+	text-align: center;
+}
+
+nav{
+	background-color: #D4DBC5;
+}
+
+aside {
+	background-color: #F0E7C9;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+.header{
+	font-size: 46px;
+	background-color: magenta;
+	display: block;
+}
+
+.footer{
+	font-size: 10px;
+	background-color: magenta;
+	display: block;
+}
+
+.content{
+	font-size: 14px;
+	text-align: justify;
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+	position: relative;
+	float:left;
+}
+
+.navigation{
+	font-size: 12px;
+	background-color: blue;
+	display: inline-block;
+	vertical-align: top;
+	height: 500px;
+	width:25%;
+	position: relative;
+	float: left;
+}
+
+.sidebar{
+	font-size: 10px;
+	background-color: magenta;
+	display: inline-block;
+	vertical-align: top;
+	height: 500px;
+	width: 25%;
+	position: relative;
+}
