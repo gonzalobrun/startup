@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $(".button").click(function() {
-    $.get("http://botcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
+    $.get("http://bootcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
     	if(textStatus === "success") { 
     		var greeting = resp.response.greeting.split(" "); 
     	}
