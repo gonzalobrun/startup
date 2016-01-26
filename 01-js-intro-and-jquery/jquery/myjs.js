@@ -11,8 +11,12 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $(".button").click(function() {
-    $.get("http://bootcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
-        $(".response").append(textStatus === "success" ? resp.response.greeting + ", " + resp.response.Welcome : textStatus + ", " + jqxhr);
+    $.get("http://botcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
+    	if(textStatus === "success") { 
+    		var greeting = resp.response.greeting.split(" "); 
+    	}
+    	$(".response").empty();
+        $(".response").append(textStatus === "success" ? greeting[0] + " <span> " + greeting[1] + "</span>, " + resp.response.Welcome : textStatus + " " + jqxhr);
         });    
     });
 });

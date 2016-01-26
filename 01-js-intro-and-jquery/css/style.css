@@ -83,3 +83,21 @@ body{
 	padding: 30px;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
 }
+
+.error{
+	color:red;
+	display: block;
+	width: 100%;
+	color:orange;
+	text-align: justify;
+	font-size: 18px;
+	padding:30px 150px 30px 150px;
+}
+
+span{
+	background-color: gray;
+}
+
+h3{
+	color: red;
+}
