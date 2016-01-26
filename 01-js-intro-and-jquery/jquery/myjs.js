@@ -13,7 +13,10 @@ $(document).ready(function(){
   $(".button").click(function() {
     $.get("http://bootcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
     	if(textStatus === "success") { 
-    		var greeting = resp.response.greeting.split(" "); 
+    		var greeting = resp.response.greeting.split(" ");
+    	}
+    	else{
+    		$(".response").css({"background-color":"red", "color":"white"});
     	}
     	$(".response").empty();
         $(".response").append(textStatus === "success" ? greeting[0] + " <span> " + greeting[1] + "</span>, " + resp.response.Welcome : textStatus + " " + jqxhr);

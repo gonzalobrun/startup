@@ -68,7 +68,7 @@ body{
 	display: block;
 	width: 100%;
 	color:orange;
-	text-align: justify;
+	text-align: center;
 	font-size: 18px;
 	padding:30px 150px 30px 150px;
 
@@ -85,10 +85,10 @@ body{
 }
 
 .error{
-	color:red;
+	background-color: red;
 	display: block;
 	width: 100%;
-	color:orange;
+	color:white;
 	text-align: justify;
 	font-size: 18px;
 	padding:30px 150px 30px 150px;
