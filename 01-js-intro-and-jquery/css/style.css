@@ -19,27 +19,29 @@ body{
 
 .content{
 	color: #cc6633;
-	display: block;
-	padding: 45px 150px 45px 150px;
+	display: inline-block;
+	padding: 45px 80px 45px 80px;
 	text-align: justify;
 	display: none;
-
+	width: 65%;
+	float: left;
 }
 
 .hide{
 	color: #ffcc33;
-	display: block;
+	display: inline-block;
 	padding: 45px 100px 45px 100px;
 	font-family: calibri;
 	font-size: 100px;
 	display: none;
-
+	width: 65%;
+	float: left;
 }
 
 .button{
 	height: 100px;
 	width: 100px;
-	background-color: #cc6633;
+	background-color: #ffda47;
 	color: white;
 	font-family:Arial;
 	-moz-border-radius:50px;
@@ -56,7 +58,7 @@ body{
 }
 
 .button:hover {
-	background-color:#cc6600;
+	background-color:#ffcc33;
 }
 
 .button:active {
@@ -68,9 +70,9 @@ body{
 	display: block;
 	width: 100%;
 	color:orange;
-	text-align: center;
 	font-size: 18px;
-	padding:30px 150px 30px 150px;
+	padding:30px 180px 30px 180px;
+	float: left;
 
 }
 
@@ -82,11 +84,12 @@ body{
 	width: 100%;
 	padding: 30px;
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0);
+	clear: both;
 }
 
 .error{
 	background-color: red;
-	display: block;
+	display: in;
 	width: 100%;
 	color:white;
 	text-align: justify;
@@ -98,6 +101,40 @@ span{
 	background-color: gray;
 }
 
-h3{
-	color: red;
+.form{
+	width: 65%;
+	float: left;
+}
+
+.music{
+	width: 35%;
+	float: right;
+	height: 780px;
+	padding: 55px 15px 55px 15px
+}
+
+.music article{
+	padding: 20px 15px 20px 15px
+}
+
+.search {
+  -webkit-border-radius: 30;
+  -moz-border-radius: 30;
+  border-radius: 30px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #ffda47;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.search:hover {
+  background: #ffcc33;
+  text-decoration: none;
+}
+
+#artist{
+	margin: 10px;
 }
