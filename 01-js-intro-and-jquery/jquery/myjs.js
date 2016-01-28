@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	$(".header").slideDown(1000);
-    $(".hide").fadeIn(1500, function() {
+    $(".hide").fadeIn(1000, function() {
   	  $(".alias").focus();
 	});
 });
 
 $(document).ready(function() {
-    $(".content, .button").fadeIn(1000);
+    $(".content, .button, .alias, .search, .footer").fadeIn(1000);
 });
 
 $(document).ready(function(){

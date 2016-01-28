@@ -55,6 +55,7 @@ body{
 .alias{
 	text-align: center;
 	margin: 30px 30px 30px 30px;
+	display: none;
 }
 
 .button:hover {
@@ -78,7 +79,7 @@ body{
 
 .footer{
 	background-color:#e2e2e2; 
-	display:block;
+	display:none;
 	color: white;
 	height: 80px;
 	width: 100%;
@@ -143,10 +144,6 @@ span{
 	color:gray;
 }
 
-.spot img{
-	
-}
-
 .play {
   -webkit-border-radius: 15;
   -moz-border-radius: 15;
@@ -162,4 +159,8 @@ span{
 .play:hover {
   background: #e69900;
   text-decoration: none;
+}
+
+.search{
+	display: none;
 }
