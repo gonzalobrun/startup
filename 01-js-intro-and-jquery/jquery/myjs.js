@@ -25,6 +25,8 @@ $(document).ready(function(){
     });
 });
 
+/*
+
 $(document).ready(function(){
     $(".rolling").click(function(){
         $(".spot").empty();
@@ -39,6 +41,36 @@ $(document).ready(function(){
                         $("article.spot").append("Name: "+ item.name + "<br>");
                         $("article.spot").append("Type: " + item.type + "<br>");
                         $("article.spot").append("<img src='" + item.images[1].url + "'/><br>");
+                        $("article.spot").append("<a href='" + item.uri + "'><button type='button' class='play'>Play It</button></a> <br><hr>");
+                    });
+                    
+                });
+            }
+        });
+    });
+});
+
+*/
+
+
+$(document).ready(function(){
+    $(".search").click(function(){
+        $(".spot").empty();
+        var artist = $('#artist').val();
+        if (artist == ""){
+            artist = 'Rolling Stones';
+        }
+        $.ajax({
+            url:'https://api.spotify.com/v1/search',
+            data: {"q": artist, "type":'album'},
+            type: 'GET',
+            dataType: 'json',
+            success: function(json){
+                $.each(json, function(i, albums){
+                    $.each(albums.items, function(i, item){
+                        $("article.spot").append("Name: "+ item.name + "<br>");
+                        $("article.spot").append("Type: " + item.type + "<br>");
+                        $("article.spot").append("<img src='" + item.images[2].url + "'/><br>");
                         $("article.spot").append("<a href='" + item.uri + "'><button type='button' class='play'>Play It</button></a> <br><hr>");
                     });
                     
