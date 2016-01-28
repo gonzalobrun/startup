@@ -11,7 +11,8 @@ $(document).ready(function() {
 
 $(document).ready(function(){
   $(".button").click(function() {
-    $.get("http://bootcamp.dsupport2000.com/Natalia").always(function(resp, textStatus, jqxhr) {
+    var name = $('#alias').val();
+    $.get("http://bootcamp.dsupport2000.com/"+name).always(function(resp, textStatus, jqxhr) {
     	if(textStatus === "success") { 
     		var greeting = resp.response.greeting.split(" ");
     	}
@@ -25,23 +26,23 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
-    $(".search").click(function(){
-        alert("THIS IS A TEST");
+    $(".rolling").click(function(){
+        $(".spot").empty();
         $.ajax({
             url:'https://api.spotify.com/v1/search',
             data: {"q":'Rolling Stones', "type":'album'},
             type: 'GET',
             dataType: 'json',
-            done: function  (json){
-                $.each(json), function(index, value){
-                    $.each(value.item), function(index, item)
-                    {
-                        $("article.spot").append("Name: "+ item.name+ "<br>");
+            success: function(json){
+                $.each(json, function(i, albums){
+                    $.each(albums.items, function(i, item){
+                        $("article.spot").append("Name: "+ item.name + "<br>");
                         $("article.spot").append("Type: " + item.type + "<br>");
-                        $("article.spot").append("Album Cover: <img src='" + item.images[1].url + "'/><br>");
-                        $("article.spot").append("<a href='" + item.external_urls.spotify + "'>Play It!</href>");
-                    }
-                }
+                        $("article.spot").append("<img src='" + item.images[1].url + "'/><br>");
+                        $("article.spot").append("<a href='" + item.uri + "'><button type='button' class='play'>Play It</button></a> <br><hr>");
+                    });
+                    
+                });
             }
         });
     });
