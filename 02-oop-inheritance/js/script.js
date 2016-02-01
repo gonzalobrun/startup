@@ -7,14 +7,18 @@ function Movie(name, genre, duration, release_date) {
 	this.release_date = release_date
 };
 
+// 6- Log to console when each event is fired.
+
 Movie.prototype.play = function(){
-	console.log(this.name + " is playing now");
+	//console.log(this.name + " is playing now");
 	observer1.play();
+	return observer1.history();
 };
 
 Movie.prototype.stop = function(){
-	console.log( this.name + " has been stopped");
+	//console.log( this.name + " has been stopped");
 	observer1.stop();
+	return observer1.history();
 };
 
 //--------ASK---------- SET --- GET-----------
@@ -52,18 +56,38 @@ function MovieObserver() {
 	this.observer = [];
 };
 
+// 4 - Publish "playing" event on Movie.play().
+// My Movie.play() method call this one.
+
 MovieObserver.prototype.play = function(){
-		console.log(this.observer.push("Play"));
+		this.observer.push("Played");
 }
 
+// 5- Publish "stopped" event on Movie.stop().
+
 MovieObserver.prototype.stop = function(){
-		console.log(this.observer.push("Stop"));
+		this.observer.push("Stopped");
 }
 
 MovieObserver.prototype.history = function(){
 	for(i = 0; i < this.observer.length; i++){
 		console.log(this.observer[i]);
+		//return this.observer[i];
 	}
 }
 
 var observer1 = new MovieObserver();
+
+$(document).ready(function(){
+	$("#btn1").click(function(){
+	//	$("#history1").empty();
+		$("#history1").append(movie1.play());
+	});
+});
+
+$(document).ready(function(){
+	$("#btn2").click(function(){
+	//	$("#history1").empty();
+		$("#history1").append(movie1.stop());
+	});
+});
