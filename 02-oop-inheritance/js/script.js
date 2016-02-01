@@ -8,14 +8,13 @@ function Movie(name, genre, duration, release_date) {
 };
 
 Movie.prototype.play = function(){
-	console.log("The movie is playing");
-	var observer1 = new MovieObserver(); //IS THIS OK?
-	observer1.status(true);
+	console.log(this.name + " is playing now");
+	observer1.play();
 };
 
 Movie.prototype.stop = function(){
-	console.log("The movie has been stopped");
-	observer1.status(false);
+	console.log( this.name + " has been stopped");
+	observer1.stop();
 };
 
 //--------ASK---------- SET --- GET-----------
@@ -31,7 +30,7 @@ Movie.prototype.set = function(attr, value){
 
 Movie.prototype.get = function(attr, value){
 	if ((Movie.prototype.hasOwnProperty("attr")) == true){
-		return attr.value;
+		return this.attr.value;
 	}
 	else{
 		console.log("This property has not been found")
@@ -50,13 +49,21 @@ var movie3 = new Movie("Oblivion", "Action", 123, "12/04/2013");
 // I added the MovieObserver.status property to the Play and Stop methods.
 
 function MovieObserver() {
-	play = false;
+	this.observer = [];
 };
 
-//This function will recibe true or false to set the PLAY property of MovieObserver
-
-MovieObserver.prototype.status = function(status){
-	this.play = status;
+MovieObserver.prototype.play = function(){
+		console.log(this.observer.push("Play"));
 }
 
+MovieObserver.prototype.stop = function(){
+		console.log(this.observer.push("Stop"));
+}
 
+MovieObserver.prototype.history = function(){
+	for(i = 0; i < this.observer.length; i++){
+		console.log(this.observer[i]);
+	}
+}
+
+var observer1 = new MovieObserver();
