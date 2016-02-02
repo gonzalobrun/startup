@@ -71,10 +71,24 @@ img {
 aside.history{
 	display: inline-block;
 	height: 200px;
+	width: 150px;
+	float: right;
+	padding: 5px;
+}
+
+aside.activity{
+	display: inline-block;
+	height: 200px;
 	width: 300px;
 	float: right;
+	padding: 5px;
 }
 
 .controls{
 	display: block;
+}
+
+span{
+	font-size: 18px;
+	color:#1EA6A3;
 }
