@@ -5,6 +5,7 @@ function Movie(name, genre, duration, release_date) {
 	this.genre = genre;
 	this.duration = duration;
 	this.release_date = release_date
+	this.cast = [];
 };
 
 // 6- Log to console when each event is fired.
@@ -284,3 +285,24 @@ actor14 = new Actor("Andrea","Riseborough");
 actor15 = new Actor("Melissa","Leo");
 
 // 12 - Show how you would add an array of actors to a Movie object.
+
+// I HAVE TO DO IT THIS WAY, BY ADDING MANUALLY THE PROPERTY CAST TO MY CONSTRUCTOR
+// THE COMENTED CODE BELOW CREATED ME THE PROPERTY CAST IN THE OBJECT, BUT I THINK 
+// THE hasOwnProperty METHOD IS NOT WORKING, BECAUSE ADDING AN ACTOR OVERWRITES THE ONE ADDED BEFORE
+
+ Movie.prototype.loadCast = function(actor){
+		this.cast.push(actor);
+	}
+
+/*
+Movie.prototype.loadCast = function(actor){
+	if ((Movie.hasOwnProperty("cast")) == true){
+		this.cast.push(actor);
+	} 
+	else {
+		var cast = new Array();
+		cast.push(actor);
+		this.cast = cast;
+	}
+}
+*/
