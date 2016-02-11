@@ -6,7 +6,7 @@ requirejs.config({
 
 require(['jquery', 'movies'], function($, movies){
     for (var i = myMovies.length - 1; i >= 0; i--) {
-        $('#films').append("<option value='"myMovies[i].name"'>" + myMovies[i].name + '</option>');
+        $('#films').append( + "<option value='" + myMovies[i].name + "'>" + myMovies[i].name + '</option>' );
     };
 
     $('#list option:selected').change(function(){
