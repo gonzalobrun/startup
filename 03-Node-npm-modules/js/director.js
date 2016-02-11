@@ -2,21 +2,31 @@
 // The avengers - Joss Whedon
 // Oblivion - Joseph Kosinski
 
-function Director(name, lastName){
-	this.name= name;
-	this.lastName = lastName;
-};
+define('director', function() {
 
-Director.prototype.set = function(attr, value){
-	this.attr = value;
-};
+	function Director(name, lastName){
+		this.name= name;
+		this.lastName = lastName;
+		this.quotes = [];
+	};
 
-Director.prototype.get = function(attr){
-	return this.attr.value
-};
+	Director.prototype.set = function(attr, value){
+		this.attr = value;
+	};
 
-Director.prototype.fullName = function(){
-	return this.name + " " + this.lastName;
-};
+	Director.prototype.get = function(attr){
+		return this.attr.value
+	};
 
-module.exports = Director;
+	Director.prototype.fullName = function(){
+		return this.name + " " + this.lastName;
+	};
+
+	Director.prototype.setQuotes = function(quote){
+		var text = quote;
+		this.quotes.push(text);
+	};
+	
+	return new Director();
+
+});

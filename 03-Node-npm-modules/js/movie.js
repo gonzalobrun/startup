@@ -1,27 +1,28 @@
-function Movie(name, genre, duration, release_date) {
-	this.name = name;
-	this.genre = genre;
-	this.duration = duration;
-	this.release_date = release_date
-};
+define('movie', ['director'], function (director) {
 
-Movie.prototype.play = function(obs){
-	return (this.name + " is playing now");
-};
+	function Movie(name, genre, duration, release_date) {
+		this.name = name;
+		this.genre = genre;
+		this.duration = duration;
+		this.release_date = release_date;
+		this.director = director;
+	};
 
-Movie.prototype.stop = function(obs){
-	return ( this.name + " has been stopped");
-};
+	Movie.prototype.play = function(obs){
+		return (this.name + " is playing now");
+	};
 
-Movie.prototype.set = function(attr, value){
-		this.attr = value;
-};
+	Movie.prototype.stop = function(obs){
+		return ( this.name + " has been stopped");
+	};
 
-Movie.prototype.get = function(attr){
-		return this.attr.value;
-};
+	Movie.prototype.set = function(attr, value){
+			this.attr = value;
+	};
 
-Movie.prototype.setDirector = function(){
-	var dir = requiere('./director');
-	Movie.director = dir.fullName();
-}
+	Movie.prototype.get = function(attr){
+			return this.attr.value;
+	};
+	
+	return new Movie();
+});
