@@ -1,19 +1,14 @@
-define ('movies', ['movie', 'jquery'], function(movie){
+define ('Movies', ['Movie', 'jquery'], function(movie, $){
 
 	function Movies(){
-		this.myMovies = [];
+		this.movieArray = [];
+		this.newMovie = movie;
 	};
+
 
 	Movies.prototype.add = function(){
-		var newMovie = Movie;
-		this.myMovies.push(newMovie);
+		this.movieArray.push(this.newMovie);
 	};
 
-/*	Movies.prototype.show = function(){
-		for (var i = 0; i < myMovies.length; i++) {
-			return myMovies[i];
-		};
-	}
-*/
 	return new Movies();
 });

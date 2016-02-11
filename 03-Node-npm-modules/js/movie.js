@@ -1,10 +1,10 @@
-define('movie', ['director'], function (director) {
+define('Movie', ['Director'], function (director) {
 
-	function Movie(name, genre, duration, release_date) {
-		this.name = name;
-		this.genre = genre;
-		this.duration = duration;
-		this.release_date = release_date;
+	function Movie() {
+		this.name = "";
+		this.genre = "";
+		this.duration = "";
+		this.release_date = "";
 		this.director = director;
 	};
 

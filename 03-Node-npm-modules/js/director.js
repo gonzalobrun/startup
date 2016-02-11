@@ -2,11 +2,13 @@
 // The avengers - Joss Whedon
 // Oblivion - Joseph Kosinski
 
-define('director', function() {
 
-	function Director(name, lastName){
-		this.name= name;
-		this.lastName = lastName;
+
+define('Director', function() {
+
+	function Director(){
+		this.name= "";
+		this.lastName = "";
 		this.quotes = [];
 	};
 
