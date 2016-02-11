@@ -5,7 +5,7 @@ define('Movie', ['Director'], function (director) {
 		this.genre = "";
 		this.duration = "";
 		this.release_date = "";
-		this.director = director;
+		this.director = new director();
 	};
 
 	Movie.prototype.play = function(obs){
@@ -24,5 +24,5 @@ define('Movie', ['Director'], function (director) {
 			return this.attr.value;
 	};
 	
-	return new Movie();
+	return Movie();
 });

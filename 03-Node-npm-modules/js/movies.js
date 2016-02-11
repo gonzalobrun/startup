@@ -1,8 +1,8 @@
-define ('Movies', ['Movie', 'jquery'], function(movie, $){
+define ('Movies', ['Movie'], function (movie){
 
 	function Movies(){
 		this.movieArray = [];
-		this.newMovie = movie;
+		this.newMovie = new movie();
 	};
 
 

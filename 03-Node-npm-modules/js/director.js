@@ -3,7 +3,6 @@
 // Oblivion - Joseph Kosinski
 
 
-
 define('Director', function() {
 
 	function Director(){
@@ -29,6 +28,6 @@ define('Director', function() {
 		this.quotes.push(text);
 	};
 	
-	return new Director();
+	return Director();
 
 });
