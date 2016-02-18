@@ -1,0 +1,72 @@
+body{
+	font-family: 'Raleway', serif;
+}
+
+.movieTitle{
+
+}
+
+.movieInfo{
+
+}
+
+.page-header{
+	padding:10px;
+	background-color: lightgray;
+	border-radius: 80px;
+	padding-left: 50px;
+	padding-bottom: 20px;
+}
+
+li{
+	font-size: 18px;
+}
+
+.btn-default{
+	border-radius: 25px;
+}
+
+h3{
+	padding: 8px 8px 8px 25px;
+	border-radius: 6px;
+}
+
+
+img{
+	width: 150px;
+}
+
+form p{
+	margin: 0px;
+	font-weight: bold;
+}
+
+form input{
+	margin: 0px 0px 8px 0px;
+}
+
+#tab{
+	margin-left: 30px;
+}
+
+#hidden{
+	display:none;
+}
+.page-footer{
+
+	background-color: lightgray;
+	border-radius: 80px;
+	padding-left: 50px;
+	margin-top: 20px;
+}
+
+.page-footer p {
+	padding:11px;
+	font-size: 18px;
+	color:white;
+
+}
+
+span{
+	font-weight: bold
+}

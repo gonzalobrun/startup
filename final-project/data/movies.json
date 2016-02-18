@@ -1,0 +1,61 @@
+[
+	{
+		"title":"Man of Steel",
+		"genre":"Action",
+		"duration":"180",
+		"release_date":"2012/04/27",
+		"cast":[
+				{"actor":"Henry Cavill"},
+				{"actor": "Amy Adams"},
+				{"actor": "Michael Shannon"},
+				{"actor": "Diane Lane"},
+				{"actor": "Russel Crowe"}
+		],
+		"director":{
+					"name":"Zack",
+					"lastName": "Snyder"
+		},
+		"summary": "Clark Kent, one of the last of an extinguished race disguised as an unremarkable human, is forced to reveal his identity when Earth is invaded by an army of survivors who threaten to bring the planet to the brink of destruction.",
+		"img":"https://dl.dropboxusercontent.com/u/83177830/man-of-steel-poster.jpg"
+	},
+	{
+		"title":"The Avengers",
+		"genre":"Action",
+		"duration":"155",
+		"release_date":"2013/06/09",
+		"cast":[{"actor":"Robert Downey Jr."},
+				{"actor":"Chris Evans"},
+				{"actor": "Mark Ruffalo"},
+				{"actor": "Chris Hemsworth"},
+				{"actor": "Scarlet Johansson"},
+				{"actor": "Jeremy Ranner"}
+		],
+		"director":{
+					"name":"Joss",
+					"lastName": "Whedon"
+					},
+		"summary":"Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+		"img":"https://dl.dropboxusercontent.com/u/83177830/the-avengers-poster.jpg"
+	},
+	{
+		"title":"Oblivion",
+		"genre":"Action",
+		"duration":"147",
+		"release_date":"2013/02/10",
+		"cast":[
+				{"actor": "Tom Cruise"},
+				{"actor": "Morgan Freeman"},
+				{"actor": "Olga Kurylenko"},
+				{"actor": "Andrea Riseborough"},
+				{"actor": "Nikolaj Coster-Waldau"},
+				{"actor": "Melissa Leo"}
+		],
+		"director":{
+					"name":"Joseph",
+					"lastName": "Kosinski"
+					},
+		"summary":"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.",
+		"img":"https://dl.dropboxusercontent.com/u/83177830/oblivion-poster.jpg"
+	}
+
+]

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<title>Odeon | Cinema</title>
+</head>
+<body ng-controller="MoviesControler">
+
+	
+	<div class="container-fluid">
+		<!-- HEADER -->
+		<div class="row-fluid">
+			<div class="span12">
+				<header class="page-header">
+					<h1>Welcome to Odeon Cinema</h1>
+					<h4>Go to the movies, go to Odeon</h4>
+				</header>
+			</div>
+		</div>
+
+		<!-- NAV -->
+		<div class="row-fluid">
+			<div class="span12">
+				<nav>
+					<ul class="nav nav-pills">
+						<li><button type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#myModal">New Movie</button></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+
+		<!-- MODAL -->
+		<div id="myModal" class="modal fade">
+  			<div class="modal-dialog modal-sm">
+
+	    		<div class="modal-content">
+	    			<!-- MODAL HEADER -->
+	      			<div class="modal-header">
+	        			<button type="button" class="close" data-dismiss="modal">&times;</button>
+	        			<h4 class="modal-title">New Movie</h4>
+	      			</div>
+
+					<!-- MODAL BODY -->
+	      			<div class="modal-body">
+	        		
+						<form action="#">
+							<p>Title:</p>
+								<input type="text" name="title" ng-model="newMovie.title">
+							<p>Genre:</p>
+								<input type="text" name="genre" ng-model="newMovie.genre">
+							<p>Duration:</p>
+								<input type="text" name="duration" ng-model="newMovie.duration">
+							<p>Release Date:</p>
+								<input type="date" name="release" ng-model="newMovie.release_date"/>
+							<p>Director:</p>
+							<p id="tab" >Name:</p>
+								<input id="tab" type="text" name="dirName" ng-model="newMovie.director.name"/>
+							<p id="tab">Last Name:</p>
+								<input id="tab" type="text" name="dirLastname" ng-model="newMovie.director.lastName"/>
+							<p>Cast:</p>
+								<input name="actor"  type="text" name="actor1" ng-model="newMovie.cast[0].actor"/>
+								<input name="actor"  type="text" name="actor2" ng-model="newMovie.cast[1].actor"/>
+								<input name="actor"  type="text" name="actor3" ng-model="newMovie.cast[2].actor"/>
+							<p>Summary:</p>
+								<textarea name="summary" cols="30" rows="6" ng-model="newMovie.summary"></textarea>
+								<!-- THIS INPUT SUPOSE TO BE HIDDEN AND ALWAYS THE VALUE OF THAT LINK, BUT THE VALUE PROPERTY IS NOT WORKING -->
+								<input type="text" name="img" ng-model="newMovie.img" value="https://dl.dropboxusercontent.com/u/83177830/no-img.jpg"/>
+						</form>
+					<!-- MODAL FOOTER -->
+	      			</div>
+	      			<div class="modal-footer">
+	        			<button type="button" class="btn btn-default" ng-click="addMovie()" data-dismiss="modal">Done</button>
+	      			</div>
+	    		</div>
+
+			</div>
+		</div>
+
+		<div>
+			<div class="row-fluid movieTitle" ng-repeat="movie in movies" >
+				<!-- ROW-TITLE -->
+				<div class="btn-default">
+					<section>
+						<h3>{{movie.title}}</h3>
+					</section>
+				</div>
+				<!-- ROW-INFO -->
+				<div class="row-fluid movieInfo" visible="showInfo">
+					<!-- COL-1 -->
+					<div class="col-xs-3">
+						<p><span>Genre: </span> {{movie.genre}}</p>
+						<p><span>Duration: </span> {{movie.duration}} min.</p>
+						<p><span>Release: </span> {{movie.release_date | date}}</p>
+						<p><span>Director: </span>  {{movie.director.name}} {{movie.director.lastName}}</p>
+					</div>
+					<!-- COL2 -->
+					<div class="col-xs-3">
+						<span>Cast:</span>
+						<p ng-repeat="(key,value) in movie.cast">
+							{{value['actor']}}
+						</p>
+					</div>
+					<!-- COL3 -->
+					<div class="col-xs-3">
+						<p>{{movie.summary}}</p>
+					</div>
+					<!-- COL4 -->
+					<div class="col-xs-3">
+						<img class="pull-right" ng-src="{{movie.img}}">
+					</div>
+
+					<div class="row"></div>
+				</div>	
+			</div>
+		</div>
+		
+		
+
+		<!-- FOOTER -->
+		<footer class="page-footer">
+			<p>Thank you for your visit</p>
+		</footer>
+
+	</div>
+
+	<!-- Angular -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+	
+	<!-- Modules -->
+	<script src="js/app.js"></script>
+
+	<!-- Controlers -->
+	<script src="js/moviesController.js"></script>
+
+	<!-- jQuery -->
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
