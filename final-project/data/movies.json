@@ -16,7 +16,8 @@
 					"lastName": "Snyder"
 		},
 		"summary": "Clark Kent, one of the last of an extinguished race disguised as an unremarkable human, is forced to reveal his identity when Earth is invaded by an army of survivors who threaten to bring the planet to the brink of destruction.",
-		"img":"https://dl.dropboxusercontent.com/u/83177830/man-of-steel-poster.jpg"
+		"img":"https://dl.dropboxusercontent.com/u/83177830/man-of-steel-poster.jpg",
+		"likes":0
 	},
 	{
 		"title":"The Avengers",
@@ -35,7 +36,8 @@
 					"lastName": "Whedon"
 					},
 		"summary":"Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
-		"img":"https://dl.dropboxusercontent.com/u/83177830/the-avengers-poster.jpg"
+		"img":"https://dl.dropboxusercontent.com/u/83177830/the-avengers-poster.jpg",
+		"likes":0
 	},
 	{
 		"title":"Oblivion",
@@ -55,7 +57,8 @@
 					"lastName": "Kosinski"
 					},
 		"summary":"A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.",
-		"img":"https://dl.dropboxusercontent.com/u/83177830/oblivion-poster.jpg"
+		"img":"https://dl.dropboxusercontent.com/u/83177830/oblivion-poster.jpg",
+		"likes":0
 	}
 
 ]

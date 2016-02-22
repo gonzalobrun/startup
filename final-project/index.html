@@ -9,7 +9,7 @@
 
 	<title>Odeon | Cinema</title>
 </head>
-<body ng-controller="MoviesControler">
+<body ng-controller="MoviesController">
 
 	
 	<div class="container-fluid">
@@ -35,10 +35,10 @@
 		</div>
 
 
-		<!-- MODAL -->
+		<!-- MODAL NEW -->
+		<form name="frm">
 		<div id="myModal" class="modal fade">
   			<div class="modal-dialog modal-sm">
-
 	    		<div class="modal-content">
 	    			<!-- MODAL HEADER -->
 	      			<div class="modal-header">
@@ -49,36 +49,43 @@
 					<!-- MODAL BODY -->
 	      			<div class="modal-body">
 	        		
-						<form action="#">
-							<p>Title:</p>
-								<input type="text" name="title" ng-model="newMovie.title">
-							<p>Genre:</p>
-								<input type="text" name="genre" ng-model="newMovie.genre">
-							<p>Duration:</p>
-								<input type="text" name="duration" ng-model="newMovie.duration">
-							<p>Release Date:</p>
-								<input type="date" name="release" ng-model="newMovie.release_date"/>
-							<p>Director:</p>
-							<p id="tab" >Name:</p>
-								<input id="tab" type="text" name="dirName" ng-model="newMovie.director.name"/>
-							<p id="tab">Last Name:</p>
-								<input id="tab" type="text" name="dirLastname" ng-model="newMovie.director.lastName"/>
-							<p>Cast:</p>
-								<input name="actor"  type="text" name="actor1" ng-model="newMovie.cast[0].actor"/>
-								<input name="actor"  type="text" name="actor2" ng-model="newMovie.cast[1].actor"/>
-								<input name="actor"  type="text" name="actor3" ng-model="newMovie.cast[2].actor"/>
-							<p>Summary:</p>
-								<textarea name="summary" cols="30" rows="6" ng-model="newMovie.summary"></textarea>
-								<!-- THIS INPUT SUPOSE TO BE HIDDEN AND ALWAYS THE VALUE OF THAT LINK, BUT THE VALUE PROPERTY IS NOT WORKING -->
-								<input type="text" name="img" ng-model="newMovie.img" value="https://dl.dropboxusercontent.com/u/83177830/no-img.jpg"/>
-						</form>
-					<!-- MODAL FOOTER -->
-	      			</div>
-	      			<div class="modal-footer">
-	        			<button type="button" class="btn btn-default" ng-click="addMovie()" data-dismiss="modal">Done</button>
+						<form name="frm" data-toggle="validator">
+							<label class="control-label">Title:</label>
+								<input type="text" class="form-control" name="title" ng-model="newMovie.title" required>
+
+							<label class="control-label">Genre:</label>
+								<input type="text" class="form-control" name="genre" ng-model="newMovie.genre" required>
+
+							<label class="control-label">Duration:</label>
+								<input type="text" class="form-control" name="duration" ng-model="newMovie.duration" required>
+
+							<label class="control-label">Release Date:</label>
+								<input type="date" class="form-control" name="release_date" ng-model="newMovie.release_date" required>
+
+							<label class="control-label">Director:</label>
+							<label class="control-label">Name:</label>
+								<input class="form-control" type="text" name="dirName" ng-model="newMovie.dirName" required>
+
+							<label class="control-label">Last Name:</label>
+								<input class="form-control" type="text" name="dirLastname" ng-model="newMovie.dirLastName" required>
+
+							<label class="control-label">Cast:</label>
+								<input name="actor" class="form-control" type="text" name="actor1" ng-model="newMovie.actor1" required>
+								<input name="actor" class="form-control"  type="text" name="actor2" ng-model="newMovie.actor2" required>
+								<input name="actor" class="form-control" type="text" name="actor3" ng-model="newMovie.actor3" required>
+
+							<label class="control-label">Summary:</label>
+								<textarea name="summary" cols="30" rows="6" ng-model="newMovie.summary" requierd></textarea>
+
+								<!-- THIS INPUT SUPOSE TO BE HIDDEN AND ALWAYS THE VALUE OF THAT LINK, BUT THE VALUE PROPERTY IS NOT WORKING, I'M HARDCODING THE VALUE -->
+								<input type="text" class="hidden" name="img" value="https://dl.dropboxusercontent.com/u/83177830/no-img.jpg">
+							<!-- MODAL FOOTER -->
+			      			<div class="modal-footer">
+			        			<button type="submit" class="btn btn-default" ng-click="addMovie()" data-dismiss="modal">Done</button>
+			      			</div>
+	      				</form>
 	      			</div>
 	    		</div>
-
 			</div>
 		</div>
 
@@ -87,7 +94,12 @@
 				<!-- ROW-TITLE -->
 				<div class="btn-default">
 					<section>
-						<h3>{{movie.title}}</h3>
+						<div class="title">{{movie.title}}
+						<button class="btn default-btn btn-like" ng-click="plusOne($index)"> {{movie.likes}} <i class="fa fa-thumbs-o-up"></i> </button>
+						<button class="btn default-btn pull-right btn-custom" ng-click="delete($index)"><i class="fa fa-trash-o"></i></button>
+
+						</div>
+						
 					</section>
 				</div>
 				<!-- ROW-INFO -->
@@ -131,16 +143,13 @@
 
 	<!-- Angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
-	
-	<!-- Modules -->
-	<script src="js/app.js"></script>
-
-	<!-- Controlers -->
-	<script src="js/moviesController.js"></script>
-
 	<!-- jQuery -->
 	<script src="js/jquery-2.2.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Modules -->
+	<script src="js/app.js"></script>
 
 </body>
 </html>

@@ -26,9 +26,12 @@ li{
 	border-radius: 25px;
 }
 
-h3{
-	padding: 8px 8px 8px 25px;
+.title{
+	padding: 6px 20px 6px 25px;
 	border-radius: 6px;
+	font-size: 26px;
+	margin-top: 12px;
+	margin-bottom: 5px;
 }
 
 
@@ -45,8 +48,8 @@ form input{
 	margin: 0px 0px 8px 0px;
 }
 
-#tab{
-	margin-left: 30px;
+.tab{
+	margin-left: 8px;
 }
 
 #hidden{
@@ -69,4 +72,18 @@ form input{
 
 span{
 	font-weight: bold
+}
+
+.btn-custom{
+	background-color: transparent;
+	margin-left: 5px;
+	color:white;
+	font-size: 22px;
+}
+
+.btn-like{
+	background-color: transparent;
+	color:gray;
+	font-size: 22px;
+
 }
